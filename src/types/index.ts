@@ -10,6 +10,7 @@ export interface PhotocardItem {
   cardNo: number;
   type: 'photo' | 'video';
   src: string;
+  poster?: string;
   title: string;
   date: string;
   part: 'celi' | 'couple' | 'abib';
