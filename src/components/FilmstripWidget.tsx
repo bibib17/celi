@@ -128,46 +128,6 @@ export const FilmstripWidget: React.FC<FilmstripWidgetProps> = ({
         </button>
       </div>
 
-      {/* Meaningful Context Card: Note from Abib */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentItem.id}
-          initial={{ opacity: 0, y: 4 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -4 }}
-          transition={{ duration: 0.2 }}
-          className="p-3 bg-[#FFF0F3] rounded-2xl space-y-1.5"
-        >
-          <div className="flex items-center justify-between">
-            <span className="text-[13px] font-bold text-[#2B1713]">
-              {currentItem.title}
-            </span>
-            <span className="px-2 py-0.5 rounded-full bg-[#FFFFFF] text-[13px] font-semibold text-[#C2185B]">
-              {currentItem.tag}
-            </span>
-          </div>
-
-          <p className="text-base text-[#5C3D2E] leading-snug">
-            "{currentItem.note}"
-          </p>
-
-          <div className="pt-1 flex items-center justify-between text-[13px]">
-            <span className="text-[#93664C] flex items-center gap-1 font-medium">
-              <Sparkles size={11} className="text-[#C2185B]" />
-              Aktif di layar utama
-            </span>
-            {onOpenGallery && (
-              <button
-                onClick={onOpenGallery}
-                className="font-bold text-[#C2185B] hover:underline cursor-pointer"
-              >
-                Buka Galeri →
-              </button>
-            )}
-          </div>
-        </motion.div>
-      </AnimatePresence>
-
       {/* Floating Heart Animation */}
       <AnimatePresence>
         {floatingHeart && (

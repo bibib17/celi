@@ -14,7 +14,6 @@ export const PhotocardBinder: React.FC<PhotocardBinderProps> = ({
   onPrevPage,
 }) => {
   const [selectedCard, setSelectedCard] = useState<PhotocardItem | null>(null);
-  const [activeCategory, setActiveCategory] = useState<'all' | 'video' | 'park' | 'work' | 'candid'>('all');
   const [flippedMap, setFlippedMap] = useState<Record<string, boolean>>({});
   const [likedMap, setLikedMap] = useState<Record<string, boolean>>({});
   const [totalLikes, setTotalLikes] = useState(28);
@@ -49,12 +48,6 @@ export const PhotocardBinder: React.FC<PhotocardBinderProps> = ({
       setFloatingHeartId(null);
     }, 900);
   };
-
-  const filteredCards = CELI_SOLO_CARDS.filter((item) => {
-    if (activeCategory === 'all') return true;
-    if (activeCategory === 'video') return item.type === 'video';
-    return item.category === activeCategory;
-  });
 
   const openModal = (card: PhotocardItem) => {
     setSelectedCard(card);
@@ -121,63 +114,9 @@ export const PhotocardBinder: React.FC<PhotocardBinderProps> = ({
           </p>
         </div>
 
-        {/* Filter Categories */}
-        <div className="flex flex-wrap gap-2">
-          <button
-            onClick={() => setActiveCategory('all')}
-            className={`py-2 px-3.5 rounded-full text-[13px] font-semibold transition-colors cursor-pointer ${
-              activeCategory === 'all'
-                ? 'bg-[#2B1713] text-[#FFFFFF]'
-                : 'bg-[#FFFFFF] text-[#5C3D2E] hover:bg-[#F8BBD0]/40'
-            }`}
-          >
-            Semua Celi (28)
-          </button>
-          <button
-            onClick={() => setActiveCategory('video')}
-            className={`py-2 px-3.5 rounded-full text-[13px] font-semibold transition-colors cursor-pointer ${
-              activeCategory === 'video'
-                ? 'bg-[#2B1713] text-[#FFFFFF]'
-                : 'bg-[#FFFFFF] text-[#5C3D2E] hover:bg-[#F8BBD0]/40'
-            }`}
-          >
-            Live Video (6)
-          </button>
-          <button
-            onClick={() => setActiveCategory('park')}
-            className={`py-2 px-3.5 rounded-full text-[13px] font-semibold transition-colors cursor-pointer ${
-              activeCategory === 'park'
-                ? 'bg-[#2B1713] text-[#FFFFFF]'
-                : 'bg-[#FFFFFF] text-[#5C3D2E] hover:bg-[#F8BBD0]/40'
-            }`}
-          >
-            Taman & Santai (5)
-          </button>
-          <button
-            onClick={() => setActiveCategory('work')}
-            className={`py-2 px-3.5 rounded-full text-[13px] font-semibold transition-colors cursor-pointer ${
-              activeCategory === 'work'
-                ? 'bg-[#2B1713] text-[#FFFFFF]'
-                : 'bg-[#FFFFFF] text-[#5C3D2E] hover:bg-[#F8BBD0]/40'
-            }`}
-          >
-            Kerja Keras (8)
-          </button>
-          <button
-            onClick={() => setActiveCategory('candid')}
-            className={`py-2 px-3.5 rounded-full text-[13px] font-semibold transition-colors cursor-pointer ${
-              activeCategory === 'candid'
-                ? 'bg-[#2B1713] text-[#FFFFFF]'
-                : 'bg-[#FFFFFF] text-[#5C3D2E] hover:bg-[#F8BBD0]/40'
-            }`}
-          >
-            Candid & Senyum (9)
-          </button>
-        </div>
-
         {/* 28 Celi Photocards Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5">
-          {filteredCards.map((card) => {
+          {CELI_SOLO_CARDS.map((card) => {
             const isFlipped = !!flippedMap[card.id];
             const isLiked = !!likedMap[card.id];
 
