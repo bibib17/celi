@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-choc-dark: #2B1713;
+  --color-choc-milk: #5C3D2E;
+  --color-choc-caramel: #93664C;
+  --color-berry-soft: #FFF0F3;
+  --color-berry-blush: #F8BBD0;
+  --color-berry-punch: #E75480;
+  --color-cream-card: #FFFAF6;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF0F3;
+  background-image: url('./assets/pattern-romantic.svg');
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  color: #2B1713;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  min-height: 100dvh;
+}
+
+.bg-romantic-pattern {
+  background-color: #FFF0F3;
+  background-image: url('./assets/pattern-romantic.svg');
+  background-repeat: repeat;
+  background-size: 60px 60px;
+}
+
+/* Custom spinning animation for the retro vinyl record */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 14s linear infinite;
+}
+
+/* Custom pulse-free floating animation */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+/* Hide scrollbar for mobile clean aesthetics */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <!-- Dainty romantic plump heart 1 (Offset A) -->
+  <path d="M15 11 C14.2 9.5 12 8.5 10.2 9.8 C8 11.5 8.5 14.2 10.6 16.3 L15 20.2 L19.4 16.3 C21.5 14.2 22 11.5 19.8 9.8 C18 8.5 15.8 9.5 15 11 Z" fill="#C2185B" fill-opacity="0.07" />
+
+  <!-- Dainty romantic plump heart 2 (Offset B, staggered) -->
+  <path d="M45 41 C44.2 39.5 42 38.5 40.2 39.8 C38 41.5 38.5 44.2 40.6 46.3 L45 50.2 L49.4 46.3 C51.5 44.2 52 41.5 49.8 39.8 C48 38.5 45.8 39.5 45 41 Z" fill="#C2185B" fill-opacity="0.07" />
+
+  <!-- Tiny cute 4-point sparkle A -->
+  <path d="M45 13 Q45 16 42 16 Q45 16 45 19 Q45 16 48 16 Q45 16 45 13 Z" fill="#E75480" fill-opacity="0.07" />
+
+  <!-- Tiny cute 4-point sparkle B -->
+  <path d="M15 43 Q15 46 12 46 Q15 46 15 49 Q15 46 18 46 Q15 46 15 43 Z" fill="#E75480" fill-opacity="0.07" />
+
+  <!-- Micro soft dot accents at corners and center -->
+  <circle cx="30" cy="30" r="1.2" fill="#C2185B" fill-opacity="0.05" />
+  <circle cx="0" cy="0" r="1.2" fill="#C2185B" fill-opacity="0.05" />
+  <circle cx="60" cy="0" r="1.2" fill="#C2185B" fill-opacity="0.05" />
+  <circle cx="0" cy="60" r="1.2" fill="#C2185B" fill-opacity="0.05" />
+  <circle cx="60" cy="60" r="1.2" fill="#C2185B" fill-opacity="0.05" />
+</svg>
