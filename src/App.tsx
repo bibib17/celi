@@ -158,7 +158,7 @@ export default function App() {
 
       {/* All-Pages Mode (for comprehensive audit or single-scroll viewing) */}
       {isAllMode ? (
-        <main className="relative w-full min-h-[100dvh]">
+        <main className="relative w-full min-h-[100dvh] pb-10 sm:pb-12">
           <div className="w-full bg-transparent py-8">
             <div className="max-w-xl lg:max-w-3xl mx-auto px-4">
               <HeroCollage onNextPage={() => {}} />
@@ -208,7 +208,7 @@ export default function App() {
       ) : (
         /* Main Story Flow: Page by Page Unlocked by Interaction */
         currentPage > 0 && (
-          <main className="relative w-full min-h-[100dvh] max-w-xl mx-auto flex flex-col justify-between">
+          <main className="relative w-full min-h-[100dvh] max-w-xl mx-auto flex flex-col justify-between pb-10 sm:pb-12">
             {/* Top Story Header: Romantic Heart Page Progress Indicator */}
             <header className="relative z-40 w-full pt-4 pb-2 px-4 flex items-center justify-between gap-2 select-none">
               <div className="flex items-center gap-1.5 py-1">

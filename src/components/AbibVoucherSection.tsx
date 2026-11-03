@@ -195,11 +195,11 @@ export const AbibVoucherSection: React.FC<AbibVoucherSectionProps> = ({
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => toggleFlip(card.id)}
-                  className="relative aspect-[3/4.2] rounded-2xl bg-[#FFFFFF] p-2 flex flex-col justify-between cursor-pointer select-none overflow-hidden"
+                  className="relative aspect-[3/4.6] rounded-2xl bg-[#FFFFFF] p-2 flex flex-col justify-between cursor-pointer select-none overflow-hidden"
                 >
                   {!isFlipped ? (
                     <div className="relative w-full h-full flex flex-col justify-between">
-                      <div className="relative w-full flex-1 rounded-xl overflow-hidden bg-[#2B1713]">
+                      <div className="relative w-full flex-1 min-h-0 rounded-xl overflow-hidden bg-[#2B1713]">
                         <img
                           src={card.src}
                           alt={card.title}
@@ -237,12 +237,12 @@ export const AbibVoucherSection: React.FC<AbibVoucherSectionProps> = ({
                         </AnimatePresence>
                       </div>
 
-                      <div className="pt-2 px-1 flex items-center justify-between">
+                      <div className="pt-2 px-1 flex items-center justify-between shrink-0">
                         <div className="truncate pr-1">
-                          <div className="text-[13px] font-bold text-[#2B1713] truncate">
+                          <div className="text-[12px] sm:text-[13px] font-bold text-[#2B1713] truncate leading-tight">
                             {card.title}
                           </div>
-                          <div className="text-[13px] text-[#93664C]">
+                          <div className="text-[11px] sm:text-[12px] text-[#93664C] leading-tight mt-0.5">
                             {card.date}
                           </div>
                         </div>
@@ -258,24 +258,24 @@ export const AbibVoucherSection: React.FC<AbibVoucherSectionProps> = ({
                       </div>
                     </div>
                   ) : (
-                    <div className="relative w-full h-full rounded-xl bg-[#FFF0F3] p-3 flex flex-col justify-between text-center">
-                      <div className="space-y-1">
-                        <div className="inline-flex items-center gap-1 text-[13px] font-bold text-[#C2185B]">
+                    <div className="relative w-full h-full rounded-xl bg-[#FFF0F3] p-2.5 sm:p-3 flex flex-col justify-between text-center overflow-hidden">
+                      <div className="space-y-0.5 shrink-0">
+                        <div className="inline-flex items-center gap-1 text-[11px] sm:text-[13px] font-bold text-[#C2185B]">
                           <Sparkles size={13} />
                           <span>JANJI SETIA ABIB</span>
                         </div>
-                        <div className="text-[13px] font-bold text-[#93664C]">
+                        <div className="text-[11px] sm:text-[13px] font-bold text-[#93664C]">
                           NO. {card.cardNo} / 36
                         </div>
                       </div>
 
-                      <div className="my-auto py-2">
-                        <p className="text-sm font-bold text-[#2B1713] leading-snug">
+                      <div className="my-auto py-1">
+                        <p className="text-xs sm:text-sm font-bold text-[#2B1713] leading-snug line-clamp-4">
                           "{card.backNote}"
                         </p>
                       </div>
 
-                      <div className="pt-1 flex items-center justify-between text-[13px] text-[#93664C]">
+                      <div className="pt-1 flex items-center justify-between text-[11px] sm:text-[13px] text-[#93664C] shrink-0">
                         <span>{card.tag}</span>
                         <span className="font-semibold text-[#C2185B]">Ketuk foto</span>
                       </div>
