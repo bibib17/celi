@@ -83,7 +83,7 @@ export const HeroCollage: React.FC<HeroCollageProps> = ({
               transition={{ duration: 0.45, delay: 0.08 }}
               className="text-base sm:text-xl text-[#5C3D2E] leading-relaxed max-w-md"
             >
-              Wanita terhebat dan termanis di hidup Abib.
+              Untuk Celi, sosok baik yang selalu bikin hari-hari terasa lebih hangat.
             </motion.p>
 
             {/* Primary Action Button in First Screen */}
@@ -97,7 +97,7 @@ export const HeroCollage: React.FC<HeroCollageProps> = ({
                 onClick={onNextPage}
                 className="inline-flex items-center gap-2.5 py-3.5 px-7 rounded-full bg-[#2B1713] text-[#FFFFFF] font-semibold text-base min-h-[48px] hover:opacity-90 transition-opacity cursor-pointer"
               >
-                <span>Mau Disayang Seberapa?</span>
+                <span>Lanjut ke Cerita</span>
                 <ArrowRight size={18} className="text-[#F8BBD0]" />
               </button>
             </motion.div>
@@ -231,7 +231,7 @@ export const HeroCollage: React.FC<HeroCollageProps> = ({
           onClick={onNextPage}
           className="flex-1 py-4 px-6 bg-[#2B1713] text-[#FFFFFF] rounded-full font-semibold text-base flex items-center justify-center gap-2 cursor-pointer transition-opacity hover:opacity-90"
         >
-          <span>Mau Disayang Seberapa?</span>
+          <span>Lanjut ke Cerita</span>
           <ArrowRight size={18} className="text-[#F8BBD0]" />
         </motion.button>
       </motion.div>

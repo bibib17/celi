@@ -6,8 +6,6 @@ import { HeroCollage } from './components/HeroCollage';
 import { LoveMeter } from './components/LoveMeter';
 import { PhotocardBinder } from './components/PhotocardBinder';
 import { CoupleSection } from './components/CoupleSection';
-import { GombalanBox } from './components/GombalanBox';
-import { ConfessionSection } from './components/ConfessionSection';
 import { AbibVoucherSection } from './components/AbibVoucherSection';
 import { OutroSection } from './components/OutroSection';
 import { AudioPlayerController } from './components/AudioPlayerController';
@@ -15,7 +13,7 @@ import { asset } from './utils/assets';
 import { VoucherState } from './types';
 
 const STORAGE_KEY = 'celi_voucher_state_v3';
-const TOTAL_PAGES = 8;
+const TOTAL_PAGES = 6;
 
 export default function App() {
   const [isAllMode] = useState(() => {
@@ -181,16 +179,6 @@ export default function App() {
           </div>
           <div className="w-full bg-transparent py-8">
             <div className="max-w-xl lg:max-w-3xl mx-auto px-4">
-              <GombalanBox onNextPage={() => {}} onPrevPage={() => {}} />
-            </div>
-          </div>
-          <div className="w-full bg-transparent py-8">
-            <div className="max-w-xl lg:max-w-3xl mx-auto px-4">
-              <ConfessionSection onNextPage={() => {}} onPrevPage={() => {}} />
-            </div>
-          </div>
-          <div className="w-full bg-transparent py-8">
-            <div className="max-w-xl lg:max-w-3xl mx-auto px-4">
               <AbibVoucherSection
                 vouchers={vouchers}
                 onClaimVoucher={handleClaimVoucher}
@@ -320,32 +308,6 @@ export default function App() {
                     transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                     className="w-full"
                   >
-                    <GombalanBox onNextPage={nextPage} onPrevPage={prevPage} />
-                  </motion.div>
-                )}
-
-                {currentPage === 6 && (
-                  <motion.div
-                    key="page-6"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                    className="w-full"
-                  >
-                    <ConfessionSection onNextPage={nextPage} onPrevPage={prevPage} />
-                  </motion.div>
-                )}
-
-                {currentPage === 7 && (
-                  <motion.div
-                    key="page-7"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                    className="w-full"
-                  >
                     <AbibVoucherSection
                       vouchers={vouchers}
                       onClaimVoucher={handleClaimVoucher}
@@ -355,9 +317,9 @@ export default function App() {
                   </motion.div>
                 )}
 
-                {currentPage === 8 && (
+                {currentPage === 6 && (
                   <motion.div
-                    key="page-8"
+                    key="page-6"
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}

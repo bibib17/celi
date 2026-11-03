@@ -262,7 +262,7 @@ export const AbibVoucherSection: React.FC<AbibVoucherSectionProps> = ({
                       <div className="space-y-0.5 shrink-0">
                         <div className="inline-flex items-center gap-1 text-[11px] sm:text-[13px] font-bold text-[#C2185B]">
                           <Sparkles size={13} />
-                          <span>JANJI SETIA ABIB</span>
+                          <span>KARTU ABIB</span>
                         </div>
                         <div className="text-[11px] sm:text-[13px] font-bold text-[#93664C]">
                           NO. {card.cardNo} / 36
@@ -387,7 +387,7 @@ export const AbibVoucherSection: React.FC<AbibVoucherSectionProps> = ({
                     Voucher Peluk Erat dan Teman Cerita
                   </h4>
                   <p className="text-base text-[#5C3D2E] leading-relaxed">
-                    Sesi peluk hangat tanpa batas waktu plus siap dengerin ghibah seharian.
+                    Sesi cerita kapan pun Celi butuh teman berbagi dan berkeluh kesah.
                   </p>
                 </div>
               </div>

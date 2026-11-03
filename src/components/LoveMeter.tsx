@@ -45,20 +45,20 @@ const CuteRomanticHeart: React.FC<{ size?: number; className?: string }> = ({
 );
 
 const FUNNY_MILESTONES = [
-  { min: 1000, label: 'MUTLAK DIMANJA SELAMANYA', desc: 'Abib resmi jadi tempat pulang, peluk erat, dan patuh sama Celi seumur hidup!', icon: Award },
-  { min: 750, label: 'RATU KASUR BEBAS ATUR', desc: 'Abib siap nurut semua arahan Celi tanpa banyak protes atau alasan!', icon: Flame },
-  { min: 500, label: 'MAU DIJAGAIN 24/7', desc: 'Bebas telepon tengah malam, Abib siap dengerin curhat sampai Celi ketiduran pulas.', icon: Coffee },
-  { min: 300, label: 'MAU DIMANJA MAKSIMAL', desc: 'Siap disuapin pas mager, dan diturutin jajan coklat favorit kapan pun!', icon: Zap },
-  { min: 100, label: 'MAU DISAYANG STANDAR', desc: 'Dikabarin teratur, ditemenin ngobrol, dan diingetin makan tiap hari.', icon: Heart },
+  { min: 1000, label: 'SELALU ADA BUAT CELI', desc: 'Kapan pun Celi butuh teman cerita atau butuh bantuan, Abib selalu siap sedia.', icon: Award },
+  { min: 750, label: 'TEMAN PULANG & CERITA', desc: 'Tempat yang nyaman buat berbagi apa aja tanpa sungkan dan tanpa ragu.', icon: Flame },
+  { min: 500, label: 'PENDENGAR YANG BAIK', desc: 'Siap dengerin keluh kesah seharian biar beban Celi terasa lebih ringan.', icon: Coffee },
+  { min: 300, label: 'PERHATIAN LEBIH', desc: 'Selalu ingat hal-hal kecil dan siap temenin waktu senggang.', icon: Zap },
+  { min: 100, label: 'SALING JAGA & KABAR', desc: 'Saling bertukar kabar, saling dukung, dan saling semangatin tiap hari.', icon: Heart },
 ];
 
 const POPUP_TEXTS = [
-  'Mau Dimanja!',
-  'Mau Dipeluk!',
-  'Beliin Coklat!',
-  'Dengerin Ceritaku',
-  'Sayang Abib!',
-  'Temenin Seharian',
+  'Semangat Hari Ini!',
+  'Jangan Lupa Istirahat',
+  'Teman Cerita',
+  'Senyum Dulu',
+  'Semangat Kerjanya',
+  'Selalu Support',
 ];
 
 export const LoveMeter: React.FC<LoveMeterProps> = ({
@@ -134,7 +134,7 @@ export const LoveMeter: React.FC<LoveMeterProps> = ({
     if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
       navigator.vibrate?.(30);
     }
-    alert('Gagal dikurangi! Celi harus mau disayang dan dimanja Abib selamanya.');
+    alert('Skor perhatiannya gak bisa dikurangin ya, minimal segini!');
   };
 
   const progressPercent = Math.min(100, Math.round((loveScore / 1000) * 100));
@@ -154,18 +154,18 @@ export const LoveMeter: React.FC<LoveMeterProps> = ({
           <div className="space-y-1.5">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-[#2B1713] leading-tight">
-                Seberapa Mau Celi Disayang?
+                Tingkat Perhatian Abib
               </h2>
               <button
                 onClick={handleResetAttempt}
-                title="Coba Kurangi Manja"
+                title="Coba Kurangi"
                 className="p-1.5 rounded-full text-[#93664C] hover:text-[#C2185B] hover:bg-[#FFF0F3] transition-colors cursor-pointer shrink-0"
               >
                 <RotateCcw size={14} />
               </button>
             </div>
             <p className="text-sm sm:text-base text-[#5C3D2E]">
-              Pompa tombol hati buat tentuin seberapa banyak porsi manja dan disayang yang Celi mau dari Abib!
+              Tekan tombol hati di bawah buat nentuin seberapa banyak perhatian yang Celi mau dari Abib!
             </p>
           </div>
 
@@ -243,11 +243,11 @@ export const LoveMeter: React.FC<LoveMeterProps> = ({
               </AnimatePresence>
             </motion.button>
             <p className="text-[13px] text-[#93664C]">
-              Klik terus sampai tembus 1000% porsi manja Celi ya!
+              Klik terus sampai mencapai skor 1000 ya!
             </p>
           </div>
 
-          {/* Couple Vignette: Celi Minta Sayang, Abib Siap Laksanakan */}
+          {/* Couple Vignette: Celi & Abib */}
           <div className="pt-1 flex flex-col items-center justify-center gap-3">
             <div className="p-3 bg-[#FFF0F3] rounded-2xl flex items-center justify-between gap-3 w-full max-w-[320px]">
               {/* Celi Avatar */}
@@ -264,7 +264,7 @@ export const LoveMeter: React.FC<LoveMeterProps> = ({
                     Celi
                   </div>
                   <div className="text-[13px] text-[#93664C] leading-tight">
-                    Mau Dimanja
+                    Orang Baik
                   </div>
                 </div>
               </div>
@@ -285,7 +285,7 @@ export const LoveMeter: React.FC<LoveMeterProps> = ({
                     Abib
                   </div>
                   <div className="text-[13px] text-[#93664C] leading-tight">
-                    Siap Manjain
+                    Selalu Ada
                   </div>
                 </div>
                 <div className="w-12 h-12 rounded-xl overflow-hidden bg-[#2B1713] shrink-0 border border-[#5C3D2E]/30">
@@ -300,7 +300,7 @@ export const LoveMeter: React.FC<LoveMeterProps> = ({
 
             <div className="flex items-center justify-center gap-2">
               <span className="text-[13px] text-[#93664C]">
-                {clickCount > 0 ? `Celi sudah minta ${clickCount} kali! Abib siap!` : 'Ketuk hati buat naikin level disayang!'}
+                {clickCount > 0 ? 'Semangat terus buat Celi!' : 'Ketuk hati untuk menaikkan skor!'}
               </span>
               {loveScore < 1000 && (
                 <button
@@ -308,7 +308,7 @@ export const LoveMeter: React.FC<LoveMeterProps> = ({
                   className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#FFF0F3] text-[13px] font-bold text-[#C2185B] hover:bg-[#F8BBD0]/40 transition-colors cursor-pointer"
                 >
                   <Zap size={13} />
-                  <span>Langsung 1000%</span>
+                  <span>Langsung 1000</span>
                 </button>
               )}
             </div>

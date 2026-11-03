@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Heart, RotateCw, Sparkles, Clock, ArrowLeft, ArrowRight, ShieldCheck } from 'lucide-react';
-import { COUPLE_CARDS, REASONS_LOVE } from '../data/content';
+import { Heart, RotateCw, Sparkles, ArrowLeft, ArrowRight } from 'lucide-react';
+import { COUPLE_CARDS } from '../data/content';
 import { PhotocardItem } from '../types';
 
 interface CoupleSectionProps {
@@ -15,7 +15,6 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
 }) => {
   const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({});
   const [likedCards, setLikedCards] = useState<Record<string, boolean>>({});
-  const [activeReasonIndex, setActiveReasonIndex] = useState(0);
   const [floatingHeartId, setFloatingHeartId] = useState<string | null>(null);
 
   const toggleFlip = (id: string, e?: React.MouseEvent) => {
@@ -161,67 +160,6 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
             );
           })}
         </div>
-
-        {/* 3 Alasan Abib Jatuh Hati */}
-        <div className="space-y-3 pt-2">
-          <div className="flex items-center justify-between px-1">
-            <h3 className="text-xl font-extrabold text-[#2B1713] tracking-tight">
-              3 Alasan Abib Jatuh Hati
-            </h3>
-            <span className="text-[13px] font-semibold text-[#93664C]">
-              Ketuk untuk baca
-            </span>
-          </div>
-
-          <div className="flex gap-2">
-            {REASONS_LOVE.map((reason, idx) => (
-              <button
-                key={reason.id}
-                onClick={() => setActiveReasonIndex(idx)}
-                className={`flex-1 py-2.5 px-3 rounded-full text-[13px] font-bold transition-colors cursor-pointer ${
-                  activeReasonIndex === idx
-                    ? 'bg-[#2B1713] text-[#FFFFFF]'
-                    : 'bg-[#FFFFFF] text-[#5C3D2E] hover:bg-[#F8BBD0]/40'
-                }`}
-              >
-                Alasan {reason.numberText}
-              </button>
-            ))}
-          </div>
-
-          <motion.div
-            key={activeReasonIndex}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25 }}
-            className="p-5 rounded-3xl bg-[#FFFFFF] border-l-4 border-[#C2185B] space-y-3"
-          >
-            <div className="flex items-center justify-between">
-              <span className="text-base font-bold text-[#2B1713]">
-                {REASONS_LOVE[activeReasonIndex].title}
-              </span>
-              {REASONS_LOVE[activeReasonIndex].timestamp && (
-                <div className="inline-flex items-center gap-1 text-[13px] font-bold text-[#C2185B]">
-                  <Clock size={13} />
-                  <span>{REASONS_LOVE[activeReasonIndex].timestamp}</span>
-                </div>
-              )}
-            </div>
-
-            <p className="text-base text-[#5C3D2E] leading-relaxed">
-              {REASONS_LOVE[activeReasonIndex].body}
-            </p>
-
-            {REASONS_LOVE[activeReasonIndex].bonus && (
-              <div className="p-3 rounded-2xl bg-[#FFF0F3] flex items-start gap-2 text-sm text-[#2B1713]">
-                <ShieldCheck size={16} className="text-[#C2185B] shrink-0 mt-0.5" />
-                <p className="leading-snug">
-                  {REASONS_LOVE[activeReasonIndex].bonus}
-                </p>
-              </div>
-            )}
-          </motion.div>
-        </div>
       </div>
 
       {/* Navigation Controls */}
@@ -240,7 +178,7 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
           onClick={onNextPage}
           className="flex-1 py-4 px-6 bg-[#2B1713] text-[#FFFFFF] rounded-full font-semibold text-base flex items-center justify-center gap-2 cursor-pointer transition-opacity hover:opacity-90"
         >
-          <span>Lanjut ke Kotak Gombalan</span>
+          <span>Lanjut ke Kupon Abib</span>
           <ArrowRight size={18} className="text-[#F8BBD0]" />
         </motion.button>
       </div>

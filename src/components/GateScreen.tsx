@@ -61,7 +61,7 @@ export const GateScreen: React.FC<GateScreenProps> = ({ onUnlock }) => {
                 Ada Kado Spesial Buat Celi
               </h1>
               <p className="text-base text-[#5C3D2E] leading-relaxed">
-                Dari Abib, untuk wanita paling manis dan hebat.
+                Dari Abib, sebuah cerita kecil untuk Celi.
               </p>
             </div>
 

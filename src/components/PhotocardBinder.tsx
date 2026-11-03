@@ -117,7 +117,7 @@ export const PhotocardBinder: React.FC<PhotocardBinderProps> = ({
             </div>
           </div>
           <p className="text-base text-[#5C3D2E] leading-relaxed">
-            Bagian pertama: 28 potret dan rekaman manis wanita terhebat di mata Abib.
+            Kumpulan foto dan momen Celi yang selalu menyenangkan buat dilihat.
           </p>
         </div>
 
@@ -431,7 +431,7 @@ export const PhotocardBinder: React.FC<PhotocardBinderProps> = ({
                   </div>
 
                   <div className="pt-2 text-sm text-[#5C3D2E]">
-                    Ditulis dengan penuh rasa sayang oleh Abib
+                    Ditulis tulus oleh Abib
                   </div>
                 </div>
               )}

@@ -30,7 +30,7 @@ const RAW_CELI_SOLO_CARDS: PhotocardItem[] = [
     part: 'celi',
     category: 'video',
     tag: 'Live Reel',
-    backNote: 'Moodbooster nomor satu di dunia Abib.',
+    backNote: 'Moodbooster yang selalu bikin hari jadi lebih cerah.',
   },
   {
     id: 'pc-03',
@@ -90,19 +90,19 @@ const RAW_CELI_SOLO_CARDS: PhotocardItem[] = [
     part: 'celi',
     category: 'park',
     tag: 'Favorit Abib',
-    backNote: 'Juara satu di hati Abib selamanya.',
+    backNote: 'Salah satu potret favorit Abib.',
   },
   {
     id: 'pc-08',
     cardNo: 8,
     type: 'photo',
     src: '/img/PHOTO-2026-10-20-02-56-29.jpg',
-    title: 'Mata Pelet Celi',
+    title: 'Tatapan Teduh',
     date: '20 Okt 2026',
     part: 'celi',
     category: 'park',
     tag: 'Tatapan Teduh',
-    backNote: 'Tatapannya selalu bikin Abib luluh seketika.',
+    backNote: 'Tatapan teduh yang selalu bikin hati adem.',
   },
   {
     id: 'pc-09',
@@ -162,7 +162,7 @@ const RAW_CELI_SOLO_CARDS: PhotocardItem[] = [
     part: 'celi',
     category: 'work',
     tag: 'Tangguh',
-    backNote: 'Wanita tangguh kebanggaan dan panutan Abib.',
+    backNote: 'Salut banget sama kerja keras kamu.',
   },
   {
     id: 'pc-14',
@@ -186,7 +186,7 @@ const RAW_CELI_SOLO_CARDS: PhotocardItem[] = [
     part: 'celi',
     category: 'candid',
     tag: 'Manis Alami',
-    backNote: 'Senyum kecil kamu bikin candu seharian.',
+    backNote: 'Senyum manis yang selalu bikin adem.',
   },
   {
     id: 'pc-16',
@@ -198,7 +198,7 @@ const RAW_CELI_SOLO_CARDS: PhotocardItem[] = [
     part: 'celi',
     category: 'candid',
     tag: 'Senyum Ceria',
-    backNote: 'Bahagianya Celi itu prioritas utama Abib.',
+    backNote: 'Senang banget tiap kali liat Celi bahagia.',
   },
   {
     id: 'pc-17',
@@ -246,7 +246,7 @@ const RAW_CELI_SOLO_CARDS: PhotocardItem[] = [
     part: 'celi',
     category: 'candid',
     tag: 'Istimewa',
-    backNote: 'Selalu jadi penerang di hari-hari Abib.',
+    backNote: 'Kehadiranmu selalu bikin suasana lebih hangat.',
   },
   {
     id: 'pc-21',
@@ -258,7 +258,7 @@ const RAW_CELI_SOLO_CARDS: PhotocardItem[] = [
     part: 'celi',
     category: 'candid',
     tag: 'Moodbooster',
-    backNote: 'Tawa yang wajib Abib jaga selamanya.',
+    backNote: 'Tawa yang selalu bikin suasana jadi menyenangkan.',
   },
   {
     id: 'pc-22',
@@ -407,12 +407,12 @@ const RAW_ABIB_SOLO_CARDS: PhotocardItem[] = [
     cardNo: 33,
     type: 'photo',
     src: '/img/PHOTO-2026-11-03-09-14-35.jpg',
-    title: 'Janji Penjaga Celi',
+    title: 'Selalu Ada',
     date: '03 Nov 2026',
     part: 'abib',
     category: 'abib',
     tag: 'Siap Siaga',
-    backNote: 'Abib siap jadi tempat pulang ternyaman buat kamu.',
+    backNote: 'Abib selalu siap jadi tempat cerita dan berbagi buat kamu.',
   },
   {
     id: 'pc-34',
@@ -443,12 +443,12 @@ const RAW_ABIB_SOLO_CARDS: PhotocardItem[] = [
     cardNo: 36,
     type: 'photo',
     src: '/img/PHOTO-2026-11-03-09-14-35(3).jpg',
-    title: 'Penjamin Senyuman',
+    title: 'Teman Berbagi',
     date: '03 Nov 2026',
     part: 'abib',
     category: 'abib',
-    tag: 'Jaminan Abib',
-    backNote: 'Jaminan bahagiamu, kapan pun kamu butuh Abib.',
+    tag: 'Teman Baik',
+    backNote: 'Kapan pun Celi butuh teman cerita, Abib selalu ada.',
   },
 ];
 
@@ -460,51 +460,9 @@ export const ALL_PHOTOCARDS: PhotocardItem[] = [
   ...ABIB_SOLO_CARDS,
 ];
 
-export const REASONS_LOVE: ReasonLove[] = [
-  {
-    id: 'reason-1',
-    numberText: 'Satu',
-    title: 'Rasa Nyaman',
-    body: 'Senyaman dan setenang itu tiap kali ada di sebelah kamu.',
-  },
-  {
-    id: 'reason-2',
-    numberText: 'Dua',
-    title: 'Mata Pelet',
-    body: 'Tiap natap mata kamu, Abib langsung hanyut sama tatapanmu.',
-  },
-  {
-    id: 'reason-3',
-    numberText: 'Tiga',
-    title: 'Wanita Hebat',
-    body: 'Anak bungsu yang banting tulang tanpa ngeluh. Hebat banget!',
-    timestamp: '31 Okt 2026, 19:29 WIB',
-    bonus: 'Jam 23:30 WIB: Detail banget soal kebersihan kasur, gemas kayak mama!',
-  },
-];
+export const REASONS_LOVE: ReasonLove[] = [];
 
-export const GOMBALAN_LIST: Gombalan[] = [
-  {
-    id: 1,
-    text: 'Celi tau bedanya kamu sama SilverQueen? SilverQueen manis di mulut, kamu manis di masa depan Abib.',
-    reaction: 'Manisnya pas, bikin meleleh.',
-  },
-  {
-    id: 2,
-    text: 'Kerjaan jangan dipikirin terus Cell, mending pikirin Abib aja... gak bikin pusing tapi bikin kangen.',
-    reaction: 'Dijamin bebas pusing!',
-  },
-  {
-    id: 3,
-    text: 'Abib gak butuh espresso buat melek, liat senyum kamu aja deg-degannya ngalahin kafein 4 shot.',
-    reaction: 'Resep melek alami dari Celi.',
-  },
-  {
-    id: 4,
-    text: 'Katanya coklat nurunin stres, tapi buat Abib liat Celi ketawa aja udah lunas semua beban hidup.',
-    reaction: 'Obat bahagia terbaik.',
-  },
-];
+export const GOMBALAN_LIST: Gombalan[] = [];
 
 const RAW_HERO_FILMSTRIP: HeroFilmstripItem[] = [
   {
@@ -524,8 +482,8 @@ const RAW_HERO_FILMSTRIP: HeroFilmstripItem[] = [
     src: '/img/PHOTO-2026-10-20-02-56-29.jpg',
     date: '20 OKT 2026',
     time: '02:56 WIB',
-    title: 'Mata Pelet Celi',
-    note: 'Tiap natap mata kamu, Abib langsung hanyut sama tatapanmu.',
+    title: 'Tatapan Teduh',
+    note: 'Tatapan teduh yang selalu bikin suasana jadi tenang.',
     tag: 'Tatapan Teduh',
   },
   {
@@ -535,7 +493,7 @@ const RAW_HERO_FILMSTRIP: HeroFilmstripItem[] = [
     date: '20 OKT 2026',
     time: '03:03 WIB',
     title: 'Senyum Manis Celi',
-    note: 'Obat capek paling ampuh sedunia buat Abib.',
+    note: 'Obat capek paling ampuh setiap hari buat Abib.',
     tag: 'Moodbooster Alami',
   },
   {
@@ -546,8 +504,8 @@ const RAW_HERO_FILMSTRIP: HeroFilmstripItem[] = [
     date: '31 OKT 2026',
     time: '23:30 WIB',
     title: 'Fakta Lucu 23:30 WIB',
-    note: 'Detail kebersihan kasur yang bikin makin sayang, gemas mirip mama!',
-    tag: 'Gemas Banget',
+    note: 'Cerita lucu soal kebersihan kasur yang bikin senyum-senyum sendiri.',
+    tag: 'Momen Lucu',
   },
 ];
 
