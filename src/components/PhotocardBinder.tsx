@@ -187,13 +187,16 @@ export const PhotocardBinder: React.FC<PhotocardBinderProps> = ({
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => openModal(card)}
-                className="relative aspect-[3/4.6] rounded-2xl bg-[#FFFFFF] p-2 flex flex-col justify-between cursor-pointer select-none overflow-hidden"
+                className="relative rounded-2xl bg-[#FFFFFF] p-2 flex flex-col justify-between cursor-pointer select-none overflow-hidden"
               >
                 {/* Photocard Front / Back */}
                 {!isFlipped ? (
                   <div className="relative w-full h-full flex flex-col justify-between">
-                    {/* Media Display */}
-                    <div className="relative w-full flex-1 min-h-0 rounded-xl overflow-hidden bg-[#2B1713]">
+                    {/* Media Display - Locked 181 x 247.31 Ratio */}
+                    <div
+                      className="relative w-full aspect-[181/247.31] rounded-xl overflow-hidden bg-[#2B1713] shrink-0"
+                      style={{ aspectRatio: '181 / 247.31' }}
+                    >
                       {card.type === 'video' ? (
                         <video
                           src={card.src}
@@ -369,7 +372,10 @@ export const PhotocardBinder: React.FC<PhotocardBinderProps> = ({
 
               {/* Modal Card Body (Front or Back) */}
               {!modalFlipped ? (
-                <div className="relative aspect-[3/4.2] rounded-2xl overflow-hidden bg-black">
+                <div
+                  className="relative w-full aspect-[181/247.31] rounded-2xl overflow-hidden bg-black"
+                  style={{ aspectRatio: '181 / 247.31' }}
+                >
                   {selectedCard.type === 'video' ? (
                     <>
                       <video
@@ -413,7 +419,10 @@ export const PhotocardBinder: React.FC<PhotocardBinderProps> = ({
                 </div>
               ) : (
                 /* Modal Back Side */
-                <div className="relative aspect-[3/4.2] rounded-2xl bg-[#FFF0F3] p-6 flex flex-col justify-between text-center">
+                <div
+                  className="relative w-full aspect-[181/247.31] rounded-2xl bg-[#FFF0F3] p-6 flex flex-col justify-between text-center"
+                  style={{ aspectRatio: '181 / 247.31' }}
+                >
                   <div className="space-y-1">
                     <div className="inline-flex items-center gap-1.5 text-sm font-bold text-[#C2185B]">
                       <Sparkles size={16} />

@@ -70,11 +70,14 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => toggleFlip(card.id)}
-                className="relative aspect-[3/4.6] rounded-2xl bg-[#FFFFFF] p-2 flex flex-col justify-between cursor-pointer select-none overflow-hidden"
+                className="relative rounded-2xl bg-[#FFFFFF] p-2 flex flex-col justify-between cursor-pointer select-none overflow-hidden"
               >
                 {!isFlipped ? (
                   <div className="relative w-full h-full flex flex-col justify-between">
-                    <div className="relative w-full flex-1 min-h-0 rounded-xl overflow-hidden bg-[#2B1713]">
+                    <div
+                      className="relative w-full aspect-[181/247.31] rounded-xl overflow-hidden bg-[#2B1713] shrink-0"
+                      style={{ aspectRatio: '181 / 247.31' }}
+                    >
                       <img
                         src={card.src}
                         alt={card.title}
