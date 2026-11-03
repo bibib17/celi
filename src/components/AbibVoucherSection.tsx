@@ -169,7 +169,7 @@ export const AbibVoucherSection: React.FC<AbibVoucherSectionProps> = ({
             </div>
           </div>
           <p className="text-base text-[#5C3D2E] leading-relaxed">
-            Bagian ketiga: giliran Abib yang siap siaga jagain Celi, lengkap dengan voucher resmi gratis selamanya.
+            Klaim Voucher cinta dari abib
           </p>
         </div>
 

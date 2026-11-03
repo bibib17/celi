@@ -110,7 +110,7 @@ export const PhotocardBinder: React.FC<PhotocardBinderProps> = ({
             </div>
           </div>
           <p className="text-base text-[#5C3D2E] leading-relaxed">
-            Kumpulan foto dan momen Celi yang selalu menyenangkan buat dilihat.
+            Kumpulan foto dan momen Celi.
           </p>
         </div>
 

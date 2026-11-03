@@ -54,7 +54,7 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
             </div>
           </div>
           <p className="text-base text-[#5C3D2E] leading-relaxed">
-            Bagian kedua: saat di sebelah Celi, dunia rasanya berhenti dan tenang banget.
+            First meet
           </p>
         </div>
 

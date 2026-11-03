@@ -83,7 +83,7 @@ export const HeroCollage: React.FC<HeroCollageProps> = ({
               transition={{ duration: 0.45, delay: 0.08 }}
               className="text-base sm:text-xl text-[#5C3D2E] leading-relaxed max-w-md"
             >
-              Untuk Celi, sosok baik yang selalu bikin hari-hari terasa lebih hangat.
+              Untuk Celi, sosok baik yang selalu cantik.
             </motion.p>
 
             {/* Primary Action Button in First Screen */}
